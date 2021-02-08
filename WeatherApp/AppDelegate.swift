@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  WeatherApp
 //
-//  Created by Mobile Apps Team on 2/8/21.
+//  Created by Anshu Vij on 2/8/21.
 //
 
 import UIKit

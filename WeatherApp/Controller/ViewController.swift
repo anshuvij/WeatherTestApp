@@ -310,7 +310,7 @@ extension ViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! TableViewCell
         
         cell.cityName.text  = modelRequiredData[indexPath.section].cityName
-        cell.temp.text  = modelRequiredData[indexPath.section].temp
+        cell.temp.text  = (modelRequiredData[indexPath.section].temp!)+" °C"
         cell.dateTime.text  = modelRequiredData[indexPath.section].date
         
         return cell

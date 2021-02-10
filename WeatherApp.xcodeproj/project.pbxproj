@@ -84,7 +84,6 @@
 				16BE3AFD25D17F3900D06156 /* Controller */,
 				16BE3AFC25D17F3200D06156 /* View */,
 				16BE3AFB25D17F2C00D06156 /* Model */,
-				16BE3AFA25D17F1C00D06156 /* Api */,
 				16BE3ADF25D17C8400D06156 /* AppDelegate.swift */,
 				16BE3AE125D17C8400D06156 /* SceneDelegate.swift */,
 				16BE3AEB25D17C8800D06156 /* Assets.xcassets */,
@@ -98,7 +97,6 @@
 		16BE3AFA25D17F1C00D06156 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				16BE3AFE25D17F5100D06156 /* WeatherManager.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -110,6 +108,8 @@
 				16BE3B0225D17F9300D06156 /* WeatherManagerDelegate.swift */,
 				16BE3B0425D17F9400D06156 /* WeatherModel.swift */,
 				161F076625D18CD40067CC3D /* WeatherSavedData.swift */,
+				16BE3AFE25D17F5100D06156 /* WeatherManager.swift */,
+				16BE3AFA25D17F1C00D06156 /* Api */,
 			);
 			path = Model;
 			sourceTree = "<group>";

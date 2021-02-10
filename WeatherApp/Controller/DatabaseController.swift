@@ -98,7 +98,31 @@ class DatabaseController {
         }
     }
 
+    class func checkIfCityExist(name : String) -> Bool{
+        
+       var result = false
+        
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "Weather")
+        req.predicate = NSPredicate(format: "cityName == %@", name)
+        
+        do {
+        
+            let count =  try DatabaseController.getContext().count(for: req)
+            if count == 0 {
+                result = false
+            }
+            else
+            {
+                result = true
+            }
+        } catch {
+            print ("There is an error in checkIfCityExist records")
+        }
+        
+        return result
     
+}
+
 }
 
 

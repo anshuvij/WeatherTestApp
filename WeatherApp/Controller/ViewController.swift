@@ -83,7 +83,10 @@ class ViewController: UIViewController {
     
     func addWeatherToCoreData(temp : String, cityName : String, dateTime : String) {
         
+        print("cityExist:\(DatabaseController.checkIfCityExist(name: cityName))")
         
+       if !DatabaseController.checkIfCityExist(name: cityName)
+       {
         let entity = NSEntityDescription.entity(forEntityName: "Weather", in: DatabaseController.getContext())
         let newData = NSManagedObject(entity: entity!, insertInto: DatabaseController.getContext())
         newData.setValue(temp, forKey: "temp")
@@ -91,6 +94,7 @@ class ViewController: UIViewController {
         newData.setValue(dateTime, forKey: "searchTime")
         
         DatabaseController.saveContext()
+       }
         
         
         
@@ -250,7 +254,8 @@ extension ViewController : PlaceHelperDelegate {
         guard let lon = lon else { return }
     
         self.showSpinner(onView: self.view)
-        weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        //weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        weatherManager.fetchWeather(cityName: name!)
         
     }
     
